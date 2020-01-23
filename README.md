@@ -4,7 +4,7 @@
 ```shell script
   kubectl get nodes
   kubectl get node
-  kubectl get node -o wide:
+  kubectl get node -o wide
 
 ## Deployment example
   kubectl create deployment nginx --image=nginx
@@ -14,3 +14,12 @@
   kubectl get deployment nginx -o yaml 
   kubectl get deployment nginx -o yaml > first.yaml
 ```
+## Deployment with file
+kubectl create -f file second.yaml
+
+## afficher la configuration sans déployer
+kubectl create deployment two --image=nginx --dry run -o yaml
+
+## afficher la configuration dans le terminal
+kubectl get deployment nginx --export -o yaml
+
