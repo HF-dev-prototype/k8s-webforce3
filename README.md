@@ -15,17 +15,23 @@
   kubectl get deployment nginx -o yaml > first.yaml
 ```
 ## Deployment with file
-kubectl create -f file second.yaml
+   kubectl create -f file second.yaml
 
 ## afficher la configuration sans déployer
-kubectl create deployment two --image=nginx --dry run -o yaml
+   kubectl create deployment two --image=nginx --dry run -o yaml
 
 ## afficher la configuration dans le terminal
-kubectl get deployment nginx --export -o yaml
-kubectl get deployment nginx --export -o json
+    kubectl get deployment nginx --export -o yaml
+    kubectl get deployment nginx --export -o json
 
-##mettre à jour un yaml
-kubectl replace -f first.yaml
+## mettre à jour un yaml
+    kubectl replace -f first.yaml
+
+    kubectl deploy,pod
+
+    kubectl expose deployment/nginx
+
+kubectl get svc nginx
 
 
 
