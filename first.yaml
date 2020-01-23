@@ -43,21 +43,3 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
 
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: "2020-01-23T13:08:48Z"
-    lastUpdateTime: "2020-01-23T13:08:54Z"
-    message: ReplicaSet "nginx-86c57db685" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2020-01-23T13:19:21Z"
-    lastUpdateTime: "2020-01-23T13:19:21Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 1
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1

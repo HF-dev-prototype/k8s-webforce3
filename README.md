@@ -24,5 +24,8 @@ kubectl create deployment two --image=nginx --dry run -o yaml
 kubectl get deployment nginx --export -o yaml
 kubectl get deployment nginx --export -o json
 
+##mettre à jour un yaml
+kubectl replace -f first.yaml
+
 
 
