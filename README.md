@@ -24,14 +24,44 @@
     kubectl get deployment nginx --export -o yaml
     kubectl get deployment nginx --export -o json
 
-## mettre à jour un yaml
+## cumettre à jour un yaml
     kubectl replace -f first.yaml
 
     kubectl deploy,pod
 
     kubectl expose deployment/nginx
+##ouvrir le service nginx
+    kubectl get svc nginx
+    
+## fermer un service nginx
+    kubectl delete svc nginx
+    
+##
+    kubectl get ep nginx
 
-kubectl get svc nginx
+## trouver un pod
+    k describe pod nginx-85ff79dd56-jd9gr | grep Node:
+   
+## deployer trois pod identiques   
+    k scale deployment nginx --replicas=3
+    
+## supprimer tous les pod identiques
+    k scale deployment nginx --replicas=0
+    
+    
+## visualiser les pod qui tournent    
+    k get pod -o wide
+    k get deployment nginx
 
-
+## inspecter l'état d'un pod
+    k exec nginx-xxxx --printenv | grep KUBERNETES
+    
+## exposer un service vers l'exterieur en publique
+    k expose deployment nginx --type=LoadBalancer
+ 
+## interface kubernetesk    
+    k get svc -A
+    kubernetes-dashboard   kubernetes-dashboard        LoadBalancer   10.100.73.209    <pending>     443:31981/TCP 
+   
+    kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
 
