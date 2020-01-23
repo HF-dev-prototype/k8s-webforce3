@@ -22,4 +22,7 @@ kubectl create deployment two --image=nginx --dry run -o yaml
 
 ## afficher la configuration dans le terminal
 kubectl get deployment nginx --export -o yaml
+kubectl get deployment nginx --export -o json
+
+
 
