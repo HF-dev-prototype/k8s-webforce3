@@ -73,7 +73,8 @@ k
     kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
     k get po
     k create deployment hog --image vish/stress
-    k get deployment hog --export -o yaml > hog.yaml
+    kLS
+     get deployment hog --export -o yaml > hog.yaml
     cat hog.yaml
     k deploy
     k get deployment hog
@@ -87,3 +88,4 @@ k
     https://kubernetes.io/docs/concepts/policy/limit-range/
     k get limitrange -A
     k -n low-usage-limit get pods
+    k delete rs rs-one --cascade=false
