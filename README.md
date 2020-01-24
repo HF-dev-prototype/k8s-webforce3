@@ -89,3 +89,11 @@ k
     k get limitrange -A
     k -n low-usage-limit get pods
     k delete rs rs-one --cascade=false
+    
+    k create -f curl.yaml -n kube-public
+
+    k rollout status deployment/frontend
+    
+    
+
+    
