@@ -79,6 +79,7 @@ k
     k deploy
     k get deployment hog
     k get po
+    
     k get pods
     k logs hog-78cf7f9d64-vtkvz
     k get pods -o wide
