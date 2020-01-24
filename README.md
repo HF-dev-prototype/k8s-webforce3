@@ -1,4 +1,4 @@
-# k8s-webforce3
+e# k8s-webforce3
 
 ## Check
 ```shell script
@@ -19,7 +19,11 @@
 
 ## afficher la configuration sans déployer
    kubectl create deployment two --image=nginx --dry run -o yaml
+   
+## récupérer le token pour accéder à l'interface kubernetes
+   kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
 
+k 
 ## afficher la configuration dans le terminal
     kubectl get deployment nginx --export -o yaml
     kubectl get deployment nginx --export -o json
@@ -38,6 +42,9 @@
     
 ##
     kubectl get ep nginx
+    
+## detruire un pod
+    kubectl delete deploy <pod>
 
 ## trouver un pod
     k describe pod nginx-85ff79dd56-jd9gr | grep Node:
@@ -64,4 +71,19 @@
     kubernetes-dashboard   kubernetes-dashboard        LoadBalancer   10.100.73.209    <pending>     443:31981/TCP 
    
     kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
-
+    k get po
+    k create deployment hog --image vish/stress
+    k get deployment hog --export -o yaml > hog.yaml
+    cat hog.yaml
+    k deploy
+    k get deployment hog
+    k get po
+    k get pods
+    k logs hog-78cf7f9d64-vtkvz
+    k get pods -o wide
+    
+    k create namepsace low-usage-limit
+    k get namespace
+    https://kubernetes.io/docs/concepts/policy/limit-range/
+    k get limitrange -A
+    k -n low-usage-limit get pods

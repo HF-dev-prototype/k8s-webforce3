@@ -1,0 +1,154 @@
+k     1  k get nodes
+    2  get nodes
+    3  k get nodes
+    4  kubectl create deployement nginx --image=nginx
+    5  kubectl create deployment nginx --image=nginx
+    6  kubectl get deployments
+    7  kubectl describe deployment nginx
+    8  k get pod
+    9  pod "nginx-86c57db685-z5qbp" deleted 
+   10  deleted pod "nginx-86c57db685-z5qbp"  
+   11  k deleted pod "nginx-86c57db685-z5qbp"  
+   12  k delete pod "nginx-86c57db685-z5qbp"  
+   13  get pod
+   14  k get pod
+   15  k get events
+   16  mkdir projet
+   17  ls
+   18  cd projet
+   19  kubectl get deployment nginx -o yaml
+   20  kubectl get deployment nginx -o yaml > first.yaml
+   21  ls
+   22  pwd
+   23  cd
+   24  ls
+   25  pwd
+   26  ku
+   27  cd /projet
+   28  cd projet
+   29  ls
+   30  diff -f first.yaml
+   31  k delete deployments.apps nginx 
+   32  ls
+   33  k create -f first.yaml 
+   34  kubectl get deployment nginx -o yaml > second.yaml
+   35  ls
+   36  diff first.yaml second.yaml
+   37  get deployment nginx --export -o yaml
+   38  kubectl get deployment nginx --export -o yaml
+   39  kubectl expose deployment/nginx
+   40  ls
+   41  kubectl expose deployment/nginx
+   42  k replace -f first.yaml
+   43  ls
+   44  k replace -f first.yaml
+   45  replace -f first.yaml
+   46  kubectl replace -f first.yaml
+   47  k get deploy.pod
+   48  k get deploy,pod
+   49  k expose deployment/nginx
+   50  k get svc nginx
+   51  k get ep nginx
+   52  curl  http://192.168.106.132:80
+   53  k describe pd nginx-xxx | grep node
+   54  k describe pod nginx-xxx | grep node
+   55  k describe pod nginx-xxx | grep Node:
+   56  k get pod
+   57  k describe pod nginx-85ff79dd56-jd9gr | grep Node:
+   58  k scale deployment nginx --replicas=3
+   59  k get pod -o wide
+   60  get deployement nginx
+   61  k get deployment nginx
+   62  k get ep nginx
+   63  k exec nginx-85ff79dd56-4494b --printenv | grep KUBERNETES
+   64  k exec nginx-85ff79dd56-4494b -- printenv | grep KUBERNETES
+   65  k delete svc nginx
+   66  k get svc nginx
+   67  k expose deployment nginx --type=LoadBalancer
+   68  get svc
+   69  k get svc
+   70  k get svc -A
+   71  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
+   72  k get po
+   73  k delete deployment nginx
+   74  k get ep
+   75  k delete
+   76  k delete ep nginx 
+   77  k delete svc
+   78  k delete svc nginx
+   79  k create deployment hog --image vish/stress
+   80  k get deployment hog
+   81  k get deployment hog --export -o yaml > hog.yaml
+   82  ls
+   83  git add
+   84  git
+   85  git commit -m "derniere maj"
+   86  ls
+   87  exit
+   88  k create deployment hog --image vish/stress
+   89  k get deployment hog --export -o yaml > hog.yaml
+   90  cat hog.yaml
+   91  k deploy
+   92  cd projet
+   93  ls
+   94  k get deployment hog
+   95  k get po
+   96  history
+   97  k logs
+   98  clear
+   99  k get pods
+  100  k get pods -o wide
+  101  k describe hog-78cf7f9d64-vtkvz
+  102  k describe pod hog-78cf7f9d64-vtkvz  | grep Node:
+  103  cd
+  104  apt install htop
+  105  sudo apt install htop
+  106  history
+  107  get pods -o wide
+  108  k get pods -o wide
+  109  k delete hog
+  110  k delete deployments.apps hog 
+  111  cd projet
+  112  k create -f hog.yaml 
+  113  cd
+  114  k get pod
+  115  k logs hog-7867569d4b-528hw
+  116  k get pods -o wide
+  117  k get svc -A
+  118  k -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
+  119  k get node
+  120  k get pod
+  121  k get svc -A
+  122  k -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}' )
+  123  k delete deploy hog
+  124  k create namespace low-usage-limit
+  125  k get namespace 
+  126  k --namespace=low-usage-limit create -f low-resource-range.yaml
+  127  cd Projet
+  128  cd projet
+  129  ls
+  130  k --namespace=low-usage-limit create -f low-resource-range.yaml
+  131  kubectl describe limitrange/limit-mem-cpu-per-container -n limitrange-demo
+  132  k get pod
+  133  k get limitrange
+  134  k get limitrange -A
+  135  k -n low-usage-limite create deployment limited-hog --image vish/stress
+  136  k -n low-usage-limit create deployment limited-hog --image vish/stress
+  137  k deployment -A
+  138  K get deployment -A
+  139  k get deployment -A
+  140  k get -n pods
+  141  k get -n pod
+  142  k -n get pods
+  143  k -n low-usage-limit get pods
+  144  ls
+  145  k get deployment limited-hog --export -o yaml > limited-hog.yaml
+  146  k -n low-usage-limit get deployment limited-hog --export -o yaml > limited-hog.yaml
+  147  ls
+  148  cat limited-hog.yaml 
+  149  k -n low-usage-limit get pod limited-hog --export -o yaml > limited-hog.yaml
+  150  k -n low-usage-limit get pod limited-hog-5c8d494fc5-7xvmx --export -o yaml > limited-hog.yaml
+  151  cat limited-hog.yaml 
+  152  history
+  153  cp history > history1.txt
+  154  history > history-1.txt
